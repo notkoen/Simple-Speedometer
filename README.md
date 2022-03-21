@@ -4,8 +4,10 @@ A simple speedometer plugin made for the Zombie Escape game mode. Some players p
 The goal of this plugin is to bring back the velocity display in a similar fashion as before.
 
 # Features
-- Speedometer is disabled by default *(This is due to CSGO having only 6 `game_text` channels available, so to minimize the flickering issues with conflicting text, have it disabled where only experienced players or those that want velocity can enable it themselves)*
-- Location of speedometer is in the top left corner, similar to the original `cl_showpos` display
+- Speedometer is disabled by default *(Due to CSGO having 6 `game_text` channels, it is best to minimize channel usage to prevent flickering text due to conflicting channels)*
+- Uses `DynamicChannels` to minimize flickering issues by allowing [Dynamic Channels](https://github.com/Vauff/DynamicChannels) plugin to do the channel assignment
+- `game_text` channel is a ConVar that can be changed
+- Location of speedometer is in the top left corner, similar to `cl_showpos` display
 - Allows you to see the speed of the player you are spectating
 - Uses `ShowHudText` *(game_text)* instead of `ShowHintText` due to possible conflicts with Boss Hud plugins
 
