@@ -18,7 +18,7 @@ public Plugin myinfo =
 {
     name = "Simple Speedometer",
     author = "Cruze EDIT koen",
-    description = "1.3",
+    description = "1.3.1",
     version = "",
     url = "https://github.com/Cruze03/CSGO-Simple-SpeedoMeter" //Original plugin by Cruze
 }
@@ -33,12 +33,14 @@ public Plugin myinfo =
  * Changes for 1.3 Version:
  * - Re-added spectate target speed display
  * - Changed the display to show "Speed: " so people are not confused
- * - Fixed constant fade in/out issue when HoldTime was specified really low (Thanks tilgep!)
+ *
+ * Changes for 1.3.1 Version:
+ * - Fix a stupid mistake in max allowed channel number for sm_speedometer_channel cvar
  */
 
 public void OnPluginStart()
 {
-    g_cvar_SpeedometerChannel = CreateConVar("sm_speedometer_channel", "0", "Which channel should speed be displayed on", _, true, 0.0, true, 6.0);
+    g_cvar_SpeedometerChannel = CreateConVar("sm_speedometer_channel", "0", "Which channel should speed be displayed on", _, true, 0.0, true, 5.0);
     AutoExecConfig(true, "speedometer");
     
     RegConsoleCmd("sm_speed", Toggle_Speed, "Toggle SpeedMeter");
