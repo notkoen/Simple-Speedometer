@@ -94,6 +94,7 @@ public void OnPlayerRunCmdPost(int client, int buttons, int impulse, const float
 	{
 		SetHudTextParams(0.0, 0.0, 0.1, 255, 255, 255, 255, 0, 0.0, 0.0, 0.0); //Thanks tilgep for fixing fading in/out issue!
 		ShowHudText(client, g_cvChannel.IntValue, "Speed: %.2f u/s", fVelocity);
+		return;
 	}
 	
 	if (IsClientObserver(client))
